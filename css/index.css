@@ -90,13 +90,19 @@ body {
   margin: 2% 8%;
   font-family: 'Raleway', sans-serif;
 }
+@media (max-width: 500px) {
+  body {
+    margin: 4% 0;
+  }
+}
 section {
   padding: 2% 0;
 }
 nav {
   display: flex;
+  align-items: space-between;
   justify-content: center;
-  padding-top: 2%;
+  padding-top: 4%;
 }
 nav a {
   text-decoration: none;
@@ -106,6 +112,11 @@ nav a {
   border-right: 1px solid #4A4A4A;
   font-weight: lighter;
 }
+@media (max-width: 500px) {
+  nav a {
+    font-size: 1rem;
+  }
+}
 nav a:last-child {
   border-right: none;
 }
@@ -114,6 +125,7 @@ nav a:hover {
 }
 .title-container {
   height: 45vh;
+  max-width: 100%;
   margin: 4% 8%;
   background-position: center;
   background-image: url('../assets/home.png');
@@ -122,11 +134,23 @@ nav a:hover {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .title-container {
+    height: 30vh;
+    margin: 4% 6%;
+    background-position: 50% 55%;
+  }
+}
 .title-container h1 {
   text-align: center;
   font-size: 3rem;
   font-weight: bold;
   color: white;
+}
+@media (max-width: 500px) {
+  .title-container h1 {
+    font-size: 2rem;
+  }
 }
 .title-container button {
   color: #4A4A4A;
@@ -144,7 +168,10 @@ nav a:hover {
 }
 @media (max-width: 500px) {
   .artists-container {
-    margin: 4% 8%;
+    margin: 4% 6%;
+    flex-direction: column;
+    align-items: center;
+    padding: 4% 0 8% 0;
   }
 }
 .artists-container .artist {
@@ -152,6 +179,12 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 500px) {
+  .artists-container .artist {
+    width: 65%;
+    margin: 2% 0;
+  }
 }
 .artists-container .artist img {
   max-width: 70%;
@@ -163,9 +196,19 @@ nav a:hover {
   font-size: 1.2rem;
   padding-top: 4%;
 }
+@media (max-width: 500px) {
+  .artists-container .artist a {
+    font-size: 1rem;
+  }
+}
 .artists-container .artist .bio {
   text-align: center;
   color: #4A4A4A;
   font-size: 0.85rem;
   padding: 4% 4%;
+}
+@media (max-width: 500px) {
+  .artists-container .artist .bio {
+    font-size: 0.6rem;
+  }
 }
