@@ -1,0 +1,79 @@
+.title-container {
+    height: 45vh;
+    max-width: 100%;
+    margin: 4% 8%;
+    background-position: center;
+    background-image:url('../assets/home.png');
+    .flexMixin();
+    justify-content: center;
+
+    @media (max-width: 500px) {
+        height: 30vh;
+        margin: 4% 6%;
+        background-position: 50% 55%;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+        color: white;
+
+        @media (max-width: 500px) {
+            font-size: 2rem;
+        }
+    }
+    button {
+        .cutomButton();
+    }
+} // end of title-container
+
+
+.artists-container {
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid lightgrey;
+    margin: 0 5%;
+
+    @media (max-width: 500px) {
+        margin: 4% 6%;
+        flex-direction: column;
+        align-items: center;
+        padding: 4% 0 8% 0;
+    }
+
+    .artist {
+        width: 50%;
+        .flexMixin();
+
+        @media (max-width: 500px) {
+            width: 65%;
+            margin: 2% 0;
+        }
+
+        img {
+            max-width: 70%;
+            border-radius: 5px;
+        } 
+        a {
+            text-decoration: none;
+            color: @mainFontColor;
+            font-size: 1.2rem;
+            padding-top: 4%;
+
+            @media (max-width: 500px) {
+                font-size: 1rem;
+            }
+        }
+        .bio {
+            text-align: center;
+            color: @mainFontColor;
+            font-size: .85rem;
+            padding: 4% 4%;
+
+            @media (max-width: 500px) {
+                font-size: .6rem;
+            }
+        }
+    }
+} // end of artists-container
