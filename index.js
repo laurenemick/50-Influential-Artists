@@ -283,13 +283,9 @@ console.log(artists);
 
 // 🎨🎨 STRETCH 🎨🎨//
 
-/* STRETCH 1: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
+/* STRETCH 1: Create a function called get20s() that takes data as an argument and returns an array with names of artists 
+who were born the 20th century (1800-1900) */
 
-function get20s(/* Code here */){
-
-    /* Code here */
-
-  }
 
 /* STRETCH 2: Programtically console.log HTML element structure 
 
@@ -318,13 +314,19 @@ function getHTML(/* Code here */){
   }
 
 
-/* STRETCH 3: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
+/* STRETCH 3: Create a function called `randomize` that takes a data array as an argument and returns a 
+the same array in a randomized order. */
+let array1 = [1, 2, 3, 4, 5];
 
-function randomize(/* Code here */){
-
-    /* Code here */
-
+function randomize(arr){
+  for (let i = arr.length -1; i > 0; i--) {
+    let x = Math.floor(Math.random() * i);
+    let y = arr[i];
+    arr[i] = arr[x];
+    arr[x] = y;
   }
-
+}
+randomize(array1);
+console.log(array1);
 
  /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
